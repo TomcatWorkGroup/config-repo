@@ -1,1 +1,20 @@
-
+spring:
+  application:
+    name: SdcSoft_CloudCenter_DataCache
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+  rabbitmq:
+    host: 39.106.168.77
+    port: 5672
+    username: tomcat
+    password: 80201288
+    virtual-host: MsgCenter
+listeningQueue:
+  json: JsonDeviceMsgQueue
+  byte: ByteDeviceMsgQueue
+eureka:
+  client:
+    service-url:
+      defalutZone: http://localhost:8761/eureka/
